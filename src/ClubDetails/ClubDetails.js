@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import './ClubDetail.css'
+import './ClubDetail.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookSquare, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+// import { faTwitter } from '@fortawesome/free-solid-svg-icons';
 
 const ClubDetails = () => {
     const { clubId } = useParams();
@@ -22,13 +25,15 @@ const ClubDetails = () => {
                 <Row >
                     <Row className="club-top-container">
                         <Col md={8} className="club-top-container-text">
-                            <h4>{club.strAlternate}</h4>
+                            <h4>{club.strTeam}</h4>
                             <p>Founded: {club.intFormedYear}</p>
                             <p>Country: {club.strCountry}</p>
                             <p>Sport type: {club.strSport}</p>
                             <p>Gender: {club.strGender}</p>
                         </Col>
-                        <Col md={4}>2 of 2</Col>
+                        <Col md={4}>
+                            <h2>image section</h2>
+                        </Col>
                     </Row>
                 </Row>
                 <Row>
@@ -37,7 +42,13 @@ const ClubDetails = () => {
                         <p>{club.strStadiumDescription}</p>
                     </div>
                 </Row>
+                <div className="d-flex justify-content-center">
+                    <a className="footer-fav-icon" target="_blank" href={`https://${club.strTwitter}`}><FontAwesomeIcon icon={faTwitter} size="2x"/></a>
+                    <a className="footer-fav-icon" target="_blank" href={`https://${club.strYoutube}`}><FontAwesomeIcon icon={faYoutube} size="2x"/></a>
+                    <a className="footer-fav-icon" target="_blank" href={`https://${club.strFacebook}`}><FontAwesomeIcon icon={faFacebookSquare} size="2x"/></a>
+                </div>
             </Container>
+
         </div>
     );
 };
