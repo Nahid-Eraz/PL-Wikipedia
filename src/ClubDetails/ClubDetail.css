@@ -1,4 +1,5 @@
 .club-top-container{
+    border-radius: 5px;
     background-color: rgb(251, 79, 145);
 }
 .club-top-container-text{
@@ -12,4 +13,7 @@
 .footer-fav-icon{
     margin: 2%;
     padding-left:1%;
+}
+.gender-image{
+    width:100%;
 }
