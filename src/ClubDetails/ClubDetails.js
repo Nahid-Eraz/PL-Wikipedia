@@ -53,9 +53,9 @@ const ClubDetails = () => {
                     </div>
                 </Row>
                 <div className="d-flex justify-content-center">
-                    <a className="footer-fav-icon" target="_blank" href={`https://${club.strTwitter}`}><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
-                    <a className="footer-fav-icon" target="_blank" href={`https://${club.strYoutube}`}><FontAwesomeIcon icon={faYoutube} size="2x" /></a>
-                    <a className="footer-fav-icon" target="_blank" href={`https://${club.strFacebook}`}><FontAwesomeIcon icon={faFacebookSquare} size="2x" /></a>
+                    <a className="footer-fav-icon" target="_blank" rel="noopener noreferrer" href={`https://${club.strTwitter}`}><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
+                    <a className="footer-fav-icon" target="_blank" rel="noopener noreferrer" href={`https://${club.strYoutube}`}><FontAwesomeIcon icon={faYoutube} size="2x" /></a>
+                    <a className="footer-fav-icon" target="_blank" rel="noopener noreferrer" href={`https://${club.strFacebook}`}><FontAwesomeIcon icon={faFacebookSquare} size="2x" /></a>
                 </div>
             </Container>
 
