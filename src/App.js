@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Nav, Navbar, Card, Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Nav, Navbar} from 'react-bootstrap';
 import Home from './Component/Home/Home';
 import ClubDetails from './ClubDetails/ClubDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
