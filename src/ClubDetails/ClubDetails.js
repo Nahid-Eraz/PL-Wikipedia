@@ -25,7 +25,7 @@ const ClubDetails = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setClub(data.teams[0]))
-    }, [])
+    }, [clubId])
     return (
         <div className="club-detail-bg-color">
             <div className="front-img">
