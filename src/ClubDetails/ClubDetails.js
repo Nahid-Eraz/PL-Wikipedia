@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 import './ClubDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
-// import { faTwitter } from '@fortawesome/free-solid-svg-icons';
+import { faLandmark, faFlag, faFutbol, faVenusMars } from '@fortawesome/free-solid-svg-icons';
 
 const ClubDetails = () => {
     const { clubId } = useParams();
@@ -34,14 +34,14 @@ const ClubDetails = () => {
             <Container>
                 <Row className="d-flex justify-content-center mt-3">
                     <Row className="club-top-container d-flex justify-content-between">
-                        <Col md={6} className="club-top-container-text">
-                            <h4>{club.strTeam}</h4>
-                            <p>Founded: {club.intFormedYear}</p>
-                            <p>Country: {club.strCountry}</p>
-                            <p>Sport type: {club.strSport}</p>
-                            <p>Gender: {club.strGender}</p>
+                        <Col md={7} className="club-top-container-text">
+                            <h3>{club.strTeam}</h3>
+                            <p><FontAwesomeIcon icon={faLandmark} /> Founded: {club.intFormedYear}</p>
+                            <p><FontAwesomeIcon icon={faFlag} /> Country: {club.strCountry}</p>
+                            <p><FontAwesomeIcon icon={faFutbol} /> Sport type: {club.strSport}</p>
+                            <p><FontAwesomeIcon icon={faVenusMars} /> Gender: {club.strGender}</p>
                         </Col>
-                        <Col md={6}>
+                        <Col md={5}>
                             {gender}
                         </Col>
                     </Row>
