@@ -14,7 +14,7 @@ const Home = () => {
             .then(data => setClubs(data.teams))
     }, [])
     return (
-        <div>
+        <div className="bg-color">
             <div className="front-img">
                 <h1 >Hyper Sports</h1>
             </div>

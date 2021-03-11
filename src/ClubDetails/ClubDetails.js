@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import './ClubDetail.css'
 
 const ClubDetails = () => {
     const { clubId } = useParams();
@@ -13,20 +14,21 @@ const ClubDetails = () => {
             .then(data => setClub(data.teams[0]))
     }, [])
     return (
-        <div>
+        <div className="club-detail-bg-color">
             <div className="front-img">
                 <img style={{ width: '250px' }} src={club.strTeamBadge} alt="" />
             </div>
             <Container>
-                <Row>
-                    <Row>
-                        <Col md={6}>
+                <Row >
+                    <Row className="club-top-container">
+                        <Col md={8} className="club-top-container-text">
+                            <h4>{club.strAlternate}</h4>
                             <p>Founded: {club.intFormedYear}</p>
                             <p>Country: {club.strCountry}</p>
                             <p>Sport type: {club.strSport}</p>
                             <p>Gender: {club.strGender}</p>
                         </Col>
-                        <Col md={6}>2 of 2</Col>
+                        <Col md={4}>2 of 2</Col>
                     </Row>
                 </Row>
                 <Row>
