@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Nav, Navbar, Card, Container } from 'react-bootstrap';
 import Home from './Component/Home/Home';
+import ClubDetails from './ClubDetails/ClubDetails';
 
 
 function App() {
@@ -23,11 +24,8 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/about">
-            {/* <About /> */}
-          </Route>
-          <Route path="/users">
-            {/* <Users /> */}
+          <Route path="/club/:clubId">
+            <ClubDetails />
           </Route>
           <Route exact path="/">
             <Home />
