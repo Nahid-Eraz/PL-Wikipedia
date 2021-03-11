@@ -14,11 +14,16 @@ const Home = () => {
             .then(data => setClubs(data.teams))
     }, [])
     return (
-        <Container className="main-container">
-            {
-                clubs.map(club => <Club club={club}></Club>)
-            }
-        </Container>
+        <div>
+            <div className="front-img">
+                <h1 >Hyper Sports</h1>
+            </div>
+            <Container className="main-container">
+                {
+                    clubs.map(club => <Club club={club}></Club>)
+                }
+            </Container>
+        </div>
     );
 };
 

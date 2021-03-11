@@ -5,7 +5,7 @@ import './Club.css';
 
 const Club = (props) => {
     console.log(props);
-    const { idTeam, strTeamBadge, strTeam, strCountry, strStadium, intFormedYear, intStadiumCapacity } = props.club;
+    const { idTeam, strTeamBadge, strTeam, strLeague, strStadium, intStadiumCapacity } = props.club;
     const history = useHistory();
     const showDetails = (clubId) =>{
         const url = (`/club/${clubId}`);
@@ -19,8 +19,7 @@ const Club = (props) => {
                     <Card.Body>
                         <Card.Title>{strTeam}</Card.Title>
                         <Card.Text>
-                            <h5>Country: {strCountry}</h5>
-                            <p>Since {intFormedYear}</p>
+                            <p>{strLeague}</p>
                             <p> <small>Stadium: {strStadium} <br /> Capacity : {intStadiumCapacity}</small></p>
                         </Card.Text>
                         <Button onClick={() => showDetails(idTeam)} variant="primary">Show Details</Button>

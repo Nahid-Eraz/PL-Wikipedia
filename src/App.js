@@ -18,8 +18,7 @@ function App() {
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Navbar>
-        <h1 className="front-img">Hyper Sports</h1>
-
+        
         <Switch>
           <Route path="/home">
             <Home />
